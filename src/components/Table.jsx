@@ -29,9 +29,17 @@ function Table(props) {
     }, {});
   });
 
+  const getButtonLabel = (column) => {
+    return visibleColumns.includes(column.id) ? "Hide" : "Show";
+  };
+
   return (
     <table>
-      <TableHeader columns={data.columns} handleColumnToggle={handleColumnToggle} />
+      <TableHeader
+        columns={data.columns}
+        handleColumnToggle={handleColumnToggle}
+        getButtonLabel={getButtonLabel}
+      />
       <tbody>
         {visibleData.map((row) => (
           <TableRow key={row.id} row={row} columns={data.columns} />
@@ -42,3 +50,4 @@ function Table(props) {
 }
 
 export default Table;
+
