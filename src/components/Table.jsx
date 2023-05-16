@@ -53,11 +53,23 @@ function Table(props) {
   });
 
   return (
-    <table style={{ borderCollapse: 'collapse', width: '50%', fontFamily: 'Arial, sans-serif', textAlign: 'left' }}>
+    <table
+      style={{
+        borderCollapse: "collapse",
+        width: "50%",
+        backgroundColor: "#f2f2f2",
+        fontFamily: "Arial, sans-serif",
+        textAlign: "left",
+        boxShadow:
+          "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+      }}
+    >
       <TableHeader
         columns={data.columns}
         handleColumnToggle={handleColumnToggle}
-        getButtonLabel={(column) => visibleColumns.includes(column.id) ? "Hide" : "Show"}
+        getButtonLabel={(column) =>
+          visibleColumns.includes(column.id) ? "Hide" : "Show"
+        }
       />
       <tbody>
         {filteredData.map((row) => (
@@ -73,7 +85,18 @@ function Table(props) {
       <tfoot>
         <tr>
           <td colSpan={data.columns.length}>
-            <button onClick={handleDataSave} style={{ cursor: 'pointer', padding: '8px 16px', borderRadius: '4px', background: '#FFD700', color: 'black' }}>Save</button>
+            <button
+              onClick={handleDataSave}
+              style={{
+                cursor: "pointer",
+                marginLeft: "6px",
+                padding: "4px 8px",
+                borderRadius: "4px",
+                color: "black", marginBottom: '10px'
+              }}
+            >
+              Save
+            </button>
           </td>
         </tr>
       </tfoot>
