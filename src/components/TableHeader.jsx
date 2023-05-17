@@ -50,6 +50,7 @@ const TableHeader = ({ columns, handleColumnToggle }) => {
                   padding: "4px 8px",
                   borderRadius: "4px",
                   marginLeft: "8px",
+                  backgroundColor: "white",
                 }}
               >
                 {hiddenColumns.includes(column.id) ? "Show" : "Hide"}
@@ -63,4 +64,3 @@ const TableHeader = ({ columns, handleColumnToggle }) => {
 };
 
 export default TableHeader;
-

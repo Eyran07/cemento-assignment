@@ -56,7 +56,7 @@ function Table(props) {
     <table
       style={{
         borderCollapse: "collapse",
-        width: "50%",
+        width: "43%",
         backgroundColor: "#f2f2f2",
         fontFamily: "Arial, sans-serif",
         textAlign: "left",
@@ -92,7 +92,10 @@ function Table(props) {
                 marginLeft: "6px",
                 padding: "4px 8px",
                 borderRadius: "4px",
-                color: "black", marginBottom: '10px'
+                marginTop: "8px",
+                backgroundColor: "white",
+                color: "black",
+                marginBottom: "10px",
               }}
             >
               Save
