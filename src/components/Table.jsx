@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
 import TableHeader from "./TableHeader";
 import TableRow from "./TableRow";
 import { tableData } from "../data/tableData";
@@ -56,7 +55,7 @@ function Table(props) {
     <table
       style={{
         borderCollapse: "collapse",
-        width: "43%",
+        width: "40%",
         backgroundColor: "#f2f2f2",
         fontFamily: "Arial, sans-serif",
         textAlign: "left",
